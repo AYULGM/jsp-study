@@ -4,11 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Welcome</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<!-- 프로젝트 만들고 실행하기, 주석은 Ctrl+Shift+/ -->
-	<h1>Hello JSP!!</h1>
-	Hello! Java Server Pages.
+
 </body>
 </html>

@@ -1,14 +1,17 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Welcome</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<!-- 프로젝트 만들고 실행하기, 주석은 Ctrl+Shift+/ -->
-	<h1>Hello JSP!!</h1>
-	Hello! Java Server Pages.
+<%
+    java.util.Date today = new java.util.Date();
+
+    out.println("현재 날짜: " + today);
+%>
 </body>
 </html>
