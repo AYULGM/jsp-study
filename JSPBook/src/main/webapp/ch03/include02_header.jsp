@@ -4,18 +4,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Directives Tag</title>
 </head>
 <body>
 	<%!
-		String str = "Hello, Java Server Pages";
-	
-		public String getString() {		
-			return str;
+		int pageCount = 0;
+		void addCount() {
+			pageCount++;
 		}
 	%>
 	<%
-		out.println(getString());		
+		addCount();
 	%>
+	<header>
+		<p>이 사이트 방문은 <%= pageCount %>번째 입니다.</p>
+	</header>
 </body>
 </html>
