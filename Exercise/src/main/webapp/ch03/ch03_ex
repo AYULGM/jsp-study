@@ -1,8 +1,8 @@
 3장
 
 01 다음 중 디렉티브 태그로 사용하는 형식은 무엇인가? 3번
-① <% … %> 
-② <jsp …> 
+① <% … %> (스크립틀릿 태그)
+② <jsp …> (액션 태그)
 ③ <%@ … %> 
 ④ <! …> 
 
@@ -35,7 +35,7 @@
 Today is <%= new Date()%>
 
 ① language 
-② import 
+② import (Java.lang에 있는것만 쓸수있고 나머지는 import 해줘야함)
 ③ info 
 ④ contentType 
 
@@ -45,7 +45,7 @@ Today is <%= new Date()%>
 
 ① page 
 ② include 
-③ taglib 
+③ taglib (코드들 뿐만아니라 jar파일도 넣어줘야 함)
 ④ import 
 
 08 page 디렉티브 태그를 이용하여 다음 조건에 맞게 JSP 애플리케이션을 만들고 실행 결과를 확인하시오.
