@@ -11,6 +11,7 @@
 <body>
 	<!-- out 내장 객체로 오늘의 날짜 및 시각 출력하기 -->
 	<%
+	// response.setContentType("text/html; charset=UTF-8");
 		out.println("오늘의 날짜 및 시각<br>");
 		out.println(Calendar.getInstance().getTime() + "<br>");
 		LocalDateTime now = LocalDateTime.now();

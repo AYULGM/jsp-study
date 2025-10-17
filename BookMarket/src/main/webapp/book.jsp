@@ -1,11 +1,10 @@
+<%@page import="dao.BookRepository"%>
 <%@page import="dto.Book"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <!-- 세션은 브라우저 별로 생성이된다. 예를들어 크롬과 엣지는 다른 세션 -->
-    <!-- bookDAO가 있으면 쓰고 없으면 빈 객체를 생성하는 useBean -->
-<jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" />
+<%-- <jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" /> --%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,13 +29,16 @@
 			String id = request.getParameter("id");
 			// BookRepository 클래스로 bookDAO라는 이름의 자바빈을 생성하고
 			// 도서 아이디를 이용하여 도서 정보 가져오기
-			// 리턴결과 = 메소드호출(id);
-			Book book = bookDAO.getBookById(id);
+			// Book book = bookDAO.getBookById(id);
+			
+			// BookRepository 공유 객체로 변경
+			BookRepository dao = BookRepository.getInstance();
+			Book book = dao.getBookById(id);
 		%>
 
     <div class="row align-items-md-stretch">
       <div class="col-md-12">
-      	<!-- Quiz: 도서 정보로 채워넣기(데이터 동적 바인딩), 따옴표로 되어있는부분 채워넣기 -->
+      	<!-- Quiz: 도서 정보로 채워넣기(데이터 동적 바인딩) -->
 				<h3><b><%= book.getName() %></b></h3>
 				<p><%= book.getDescription() %></p>
 				<p>
