@@ -12,7 +12,9 @@
 	<title>도서 정보</title>
 	
 	<!-- 부트스트랩 연결 -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+	<!-- 로컬로 직접 넣기 -->
+	<link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 </head>
 <body>
 	<div class="container py-4">
@@ -37,7 +39,14 @@
 		%>
 
     <div class="row align-items-md-stretch">
-      <div class="col-md-12">
+    	<div class="col-md-5">
+    		<!-- 웹 앱 내부 접근 시 -->
+				<%-- <img alt="도서이미지" src="./resources/images/<%= book.getFilename() %>" style="width: 70%;"> --%>
+		   	<!-- 외부 폴더 접근 시 -->
+      	<img alt="도서이미지" src="<%= request.getContextPath() %>/images/<%= book.getFilename() %>" style="width: 70%;">
+    	</div>
+    
+      <div class="col-md-6">
       	<!-- Quiz: 도서 정보로 채워넣기(데이터 동적 바인딩) -->
 				<h3><b><%= book.getName() %></b></h3>
 				<p><%= book.getDescription() %></p>

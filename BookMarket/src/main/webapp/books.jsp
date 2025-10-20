@@ -12,7 +12,9 @@
 	<title>도서 목록</title>
 	
 	<!-- 부트스트랩 연결 -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+	<!-- 로컬로 직접 넣기 -->
+	<link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 </head>
 <body>
 	<div class="container py-4">
@@ -38,6 +40,13 @@
    		%>
       <div class="col-md-4">
       	<div class="h-100 p-2">
+      	<!-- 웹 앱 내부 접근 시 -->
+<%--       	<img alt="도서이미지" src="./resources/images/<%= book.getFilename() %>" style="width: 250px; height: 350px"> --%>      	
+<!-- 이미지는 여기 저장됨 -->
+      	<!-- D:\jsp-study\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\BookMarket\resources\images -->
+      	
+      	<!-- 외부 폴더 접근 시 -->
+      	<img alt="도서이미지" src="<%= request.getContextPath() %>/images/<%= book.getFilename() %>" style="width: 250px; height: 350px">
       		<h5><b><%= book.getName() %></b></h5>
       		<p>
       			<%= book.getAuthor() %>
