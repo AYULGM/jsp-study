@@ -8,6 +8,9 @@
 	
 	<!-- 부트스트랩 연결 -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- 유효성 검사 js 연결 -->
+	<script type="text/javascript" src="./resources/js/validation.js"></script>
 </head>
 <body>
 	<div class="container py-4">
@@ -24,19 +27,19 @@
 				<div class="mb-3 row">
 					<label class="col-sm-2">도서코드</label>
 					<div class="col-sm-3">
-						<input type="text" name="bookId" class="form-control">
+						<input type="text" id="bookId" name="bookId" class="form-control">
 					</div>
 				</div>
 				<div class="mb-3 row">
 					<label class="col-sm-2">도서명</label>
 					<div class="col-sm-3">
-						<input type="text" name="name" class="form-control">
+						<input type="text" id="name" name="name" class="form-control">
 					</div>
 				</div>
 					<div class="mb-3 row">
 					<label class="col-sm-2">가격</label>
 					<div class="col-sm-3">
-						<input type="text" name="unitPrice" class="form-control">
+						<input type="text" id="unitPrice" name="unitPrice" class="form-control">
 					</div>
 				</div>
 				<div class="mb-3 row">
@@ -61,7 +64,7 @@
 				<div class="mb-3 row">
 					<label class="col-sm-2">상세정보</label>
 					<div class="col-sm-5">
-						<textarea name="description" cols="50" rows="2" class="form-control" placeholder="100자 이상 적어주세요"></textarea>
+						<textarea id="description" name="description" cols="50" rows="2" class="form-control" placeholder="100자 이상 적어주세요"></textarea>
 					</div>
 				</div>			
 				<div class="mb-3 row">
@@ -73,7 +76,7 @@
 					<div class="mb-3 row">
 					<label class="col-sm-2">재고수</label>
 					<div class="col-sm-3">
-						<input type="text" name="unitsInStock" class="form-control">
+						<input type="text" id="unitsInStock" name="unitsInStock" class="form-control">
 					</div>
 				</div>
 				<div class="mb-3 row">
@@ -94,7 +97,7 @@
 				
 				<div class="mb-3 row">
 					<div class="col-sm-offset-2 col-sm-10">
-						<button type="submit" class="btn btn-primary">등록</button>
+						<button type="submit" class="btn btn-primary" onclick="checkAddBook(event)">등록</button> <!-- event라는 글자는 바꾸면안됨X -->
 					</div>
 				</div>
 			</form>

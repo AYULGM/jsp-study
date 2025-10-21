@@ -43,7 +43,7 @@
 			
 			// 전화번호 형태인지 검사
 			// const regExpPhone = /^[0-9]{3}-[0-9]{3,4}-[0,9]{4}/;
-			const regExpPhone = /^\d{3}-\d{3,4}-\d{4}/;
+			const regExpPhone = /^\d{3}-\d{3,4}-\d{4}$/;
 			
 			// 이메일 형태인지 검사
 			// const regExpEmail = 
@@ -84,6 +84,7 @@
 			if (!regExpPhone.test(phone)) { // 정규 표현식 객체의 test메소드
 				alert("연락처 입력을 확인해 주세요!");
 				return;
+			}
 			if (!regExpEmail.test(email)) { // 정규 표현식 객체의 test메소드
 				alert("이메일 입력을 확인해 주세요!");
 				return;

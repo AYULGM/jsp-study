@@ -25,7 +25,7 @@
 		function checkLogin(e) {
 			const form = document.loginForm;
 			
-			for (let ch of form.id.value) { // for-of문, 자바에서는 for-each문같은거임
+			for (let ch of form.id.value) { // for-of문, 자바에서는 for-each문같은거임,반복가능한 객체(문자열도 포함, 한글자씩 꺼내씀)에서 값을하나씩 꺼내쓸때사용함
 			if (ch < 'a' || ch > 'z') {
 				alert("아이디는 영문 소문자만 입력 가능합니다!");
 				form.id.select(); // 얘는 focus말고 select로 해보자. 보니까 드래그까지 되네.
