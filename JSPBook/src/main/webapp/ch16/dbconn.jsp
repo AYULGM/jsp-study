@@ -10,7 +10,7 @@
 <title>Database SQL</title>
 </head>
 <body>
-	<!-- JDBC API로 데이터베이스 접속하기 -->
+	<!-- JDBC API로 데이터베이스 접속하기, connection.jsp에서 DB연결 성공확인했으니, 필요한부분만 가져와서 동적include로 활용 -->
 	<%
 		Connection conn = null;
 	
