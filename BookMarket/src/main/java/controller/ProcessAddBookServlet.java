@@ -29,6 +29,12 @@ import dto.Book;
 )
 public class ProcessAddBookServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// get요청이 들어온다할지라도 post로 넘기겠다면 이렇게 코드를 짠다.
+		doPost(req,resp);
+	}
        
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
